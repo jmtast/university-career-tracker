@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150718155748) do
+ActiveRecord::Schema.define(version: 20150720021243) do
 
   create_table "students", force: :cascade do |t|
     t.integer "passed_subject_id", limit: 4
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150718155748) do
 
   create_table "subjects", force: :cascade do |t|
     t.integer "correlative_id", limit: 4
+    t.string  "name",           limit: 255
   end
 
 end
