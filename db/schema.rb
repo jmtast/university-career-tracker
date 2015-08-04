@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720021243) do
+ActiveRecord::Schema.define(version: 20150803231647) do
 
   create_table "students", force: :cascade do |t|
     t.integer "passed_subject_id", limit: 4
     t.integer "taken_subject_id",  limit: 4
+    t.string  "name",              limit: 255
   end
 
   create_table "subjects", force: :cascade do |t|
